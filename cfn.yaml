@@ -51,7 +51,7 @@ Parameters:
     NoEcho: True
   SourceRepo:
     Type: String
-    Default: https://github.com/tinuva/aws-lambda-blog.git
+    Default: https://github.com/HusnainTaseer/aws-lambda-blog.git
     Description: Source repository
   CloudFrontPriceClass:
     Type: String
