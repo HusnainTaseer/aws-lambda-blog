@@ -104,14 +104,14 @@ Resources:
   SigningKey:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: !Sub https://s3-${AWS::Region}.amazonaws.com/${BuildArtifactsBucket}/cfn-signgen.yaml
+      TemplateURL: !Sub https://s3.amazonaws.com/${BuildArtifactsBucket}/cfn-signgen.yaml
       Parameters:
         Length: 21
 
   ACM:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: !Sub https://s3-${AWS::Region}.amazonaws.com/${BuildArtifactsBucket}/ssl-cert-dns-inline.yaml
+      TemplateURL: !Sub https://s3.amazonaws.com/${BuildArtifactsBucket}/ssl-cert-dns-inline.yaml
       Parameters:
         DomainName: !Sub ${SiteBaseUrl}
         ValidationDomain: !Sub ${ValidationDomain}
